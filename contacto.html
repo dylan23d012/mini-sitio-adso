@@ -37,6 +37,52 @@
       <h1>Contáctanos</h1>
       <p>¿Tienes preguntas sobre un producto, una compra o quieres una cotización para tu sede? Escríbenos y te respondemos en menos de 24 horas.</p>
 
+      <!--
+        TODO ✍️  — Mejorar accesibilidad del formulario
+
+        OBJETIVO:
+        Hacer que los mensajes de error sean perceptibles para lectores de pantalla
+        y aparezcan en el momento correcto (no antes de que el usuario empiece a escribir).
+
+        QUÉ HACER (3 mejoras):
+
+        1. Agregar un mensaje de error visible para cada campo obligatorio,
+           usando aria-describedby. Ejemplo para el campo "nombre":
+
+           <input
+             type="text"
+             id="nombre"
+             aria-describedby="nombre-error"
+             ...
+           >
+           <span id="nombre-error" class="error" hidden>
+             Por favor escribe tu nombre.
+           </span>
+
+        2. Agregar un resumen accesible arriba del formulario con role="alert"
+           que aparezca si el usuario intenta enviar con campos vacíos:
+
+           <div role="alert" id="resumen-errores" hidden>
+             <h2>Hay errores en el formulario</h2>
+             <ul>...</ul>
+           </div>
+
+        3. Asegurar que el checkbox de "Acepto política" tenga aria-describedby
+           apuntando a un texto explicativo (no solo el label).
+
+        REQUISITOS:
+        - NO usar JavaScript todavía — la idea es preparar la estructura accesible.
+        - Mantener el min-height: 44px en todos los controles.
+        - El mensaje de error NO debe aparecer de entrada (usar atributo `hidden`).
+
+        EXTRA (opcional):
+        - Agregar JavaScript que quite el `hidden` y mueva el foco al primer error
+          cuando se intenta enviar con campos vacíos.
+      -->
+
+      <!-- TODO: agregar aquí el <div role="alert"> resumen de errores -->
+
+
       <form class="form-contacto" action="#" method="post" novalidate aria-labelledby="form-titulo">
 
         <h2 id="form-titulo" class="sr-only" style="position: absolute; left: -9999px;">Formulario de contacto</h2>
