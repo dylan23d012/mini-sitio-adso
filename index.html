@@ -29,6 +29,57 @@
           </ul>
         </details>
       </nav>
+
+      <!--
+        TODO ✍️  — Botón para alternar modo claro/oscuro
+
+        OBJETIVO:
+        Agregar un botón <button id="theme-toggle"> que permita al usuario
+        cambiar el tema (claro/oscuro) manualmente, sin depender solo del
+        prefers-color-scheme del sistema operativo.
+
+        QUÉ HACER:
+
+        1. HTML: agregar el botón aquí (ya tienes el scaffolding abajo).
+
+        2. CSS: en css/styles.css, agregar una clase `.theme-dark` en <html>
+           que aplique las mismas variables que el bloque
+           @media (prefers-color-scheme: dark). Algo así:
+
+             html.theme-dark {
+               --color-bg: #1a1a1a;
+               --color-text: #f5f5f5;
+               ... etc
+             }
+
+        3. JavaScript (en un nuevo archivo `js/theme.js`, referenciado al final del body):
+
+           const btn = document.getElementById('theme-toggle');
+           const root = document.documentElement;
+
+           // Restaurar preferencia guardada
+           if (localStorage.getItem('theme') === 'dark') {
+             root.classList.add('theme-dark');
+           }
+
+           btn.addEventListener('click', () => {
+             root.classList.toggle('theme-dark');
+             const isDark = root.classList.contains('theme-dark');
+             localStorage.setItem('theme', isDark ? 'dark' : 'light');
+             btn.setAttribute('aria-pressed', isDark);
+           });
+
+        REQUISITOS:
+        - El botón debe tener aria-pressed para anunciar el estado actual.
+        - Debe persistir la elección con localStorage.
+        - El botón también va replicado en las otras páginas
+          (catalogo.html, detalle.html, contacto.html).
+      -->
+
+      <!-- TODO: implementar este botón -->
+      <button id="theme-toggle" type="button" aria-pressed="false" aria-label="Alternar modo oscuro">
+        🌓
+      </button>
     </div>
   </header>
 
