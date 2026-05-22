@@ -1,50 +1,55 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WEB SOLUTION — Dashboard de Proyectos</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <title>WEB SOLUTION E.N.T.M.P — Portafolio</title>
   <style>
-    .dashboard-header { background:#0d6efd; color:white; padding:2rem 0; text-align:center; }
-    .projects-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1.5rem; margin:2rem 0; }
-    .project-card { border:1px solid #ddd; border-radius:12px; padding:1.5rem; box-shadow:0 2px 6px rgba(0,0,0,.08); }
-    .project-card h3 { margin-top:0; color:#0d6efd; }
-    .btn { display:inline-block; background:#0d6efd; color:white; padding:.6rem 1.2rem; border-radius:6px; text-decoration:none; margin-top:.5rem; }
+    body { margin:0; font-family:system-ui; background:#0a0a0a; color:#fff; }
+    .header { background:linear-gradient(135deg,#0d6efd,#0056b3); padding:3rem 1rem; text-align:center; }
+    .header h1 { margin:0; font-size:2.8rem; letter-spacing:1px; }
+    .header p { font-size:1.1rem; opacity:.9; margin-top:.5rem; }
+    .container { max-width:1100px; margin:3rem auto; padding:0 1.5rem; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:2rem; }
+    .card { background:#141414; border:1px solid #222; border-radius:16px; padding:2rem; transition:.3s; }
+    .card:hover { transform:translateY(-5px); border-color:#0d6efd; }
+    .card h3 { color:#0d6efd; margin-top:0; font-size:1.4rem; }
+    .card p { color:#ccc; line-height:1.5; }
+    .btn { display:inline-block; background:#0d6efd; color:white; padding:.7rem 1.4rem; border-radius:8px; text-decoration:none; margin-top:1rem; font-weight:500; }
     .btn:hover { background:#0b5ed7; }
+    footer { text-align:center; padding:3rem 1rem; color:#777; border-top:1px solid #222; margin-top:4rem; }
   </style>
 </head>
 <body>
-  <header class="dashboard-header">
+  <div class="header">
     <h1>WEB SOLUTION E.N.T.M.P</h1>
-    <p>Dashboard de Proyectos ADSO</p>
-  </header>
+    <p>Empresa de Diseño y Desarrollo de Páginas Web — ADSO</p>
+  </div>
 
-  <main class="container">
-    <h2>Mis Proyectos</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <h3>Proyecto 1 — E-commerce</h3>
-        <p>Tienda online con catálogo y carrito de compras.</p>
-        <a href="proyecto1.html" class="btn">Ver tareas</a>
+  <div class="container">
+    <h2>Nuestros Servicios</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Proyecto 1 — Sitios Corporativos</h3>
+        <p>Diseño web profesional para empresas, con secciones de servicios, contacto y blog. Adaptable a móviles.</p>
+        <a href="proyecto1.html" class="btn">Ver proyecto</a>
       </div>
-      <div class="project-card">
-        <h3>Proyecto 2 — Plataforma Educativa</h3>
-        <p>Sistema de cursos con videos y evaluaciones.</p>
-        <a href="proyecto2.html" class="btn">Ver tareas</a>
+      <div class="card">
+        <h3>Proyecto 2 — Tiendas Online</h3>
+        <p>E-commerce completos con catálogo, carrito de compras y pasarela de pago. Ideal para emprendedores.</p>
+        <a href="proyecto2.html" class="btn">Ver proyecto</a>
       </div>
-      <div class="project-card">
-        <h3>Proyecto 3 — App de Citas</h3>
-        <p>Gestión de citas médicas con recordatorios.</p>
-        <a href="proyecto3.html" class="btn">Ver tareas</a>
+      <div class="card">
+        <h3>Proyecto 3 — Landing Pages</h3>
+        <p>Páginas de aterrizaje rápidas y efectivas para campañas, portafolios personales y eventos.</p>
+        <a href="proyecto3.html" class="btn">Ver proyecto</a>
       </div>
     </div>
-  </main>
+  </div>
 
-  <footer style="text-align:center; padding:2rem; background:#f8f9fa; margin-top:3rem;">
-    <p>© 2026 WEB SOLUTION — Hecho por Dylan ADSO</p>
-    <p><a href="index.html">Volver al inicio</a></p>
+  <footer>
+    © 2026 WEB SOLUTION E.N.T.M.P — Diseño Web Profesional<br>
+    Desarrollado por Dylan — ADSO
   </footer>
 </body>
 </html>
